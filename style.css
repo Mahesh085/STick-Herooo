@@ -1,45 +1,74 @@
-body, html {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
     background-color: #333;
+    overflow: hidden;
 }
 
 #game-container {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     background-color: #444;
+    overflow: hidden;
+}
+
+.platform {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 20px;
+    background-color: #333;
+}
+
+#platform {
+    left: 50px;
+}
+
+#next-platform {
+    left: 300px;
 }
 
 #hero {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 50px;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: red;
 }
 
 #stick {
     position: absolute;
-    bottom: 50px;
-    left: 100px;
+    bottom: 20px;
+    left: 150px;
     width: 5px;
     height: 0;
     background-color: black;
     transform-origin: bottom;
 }
 
-button {
+#start-btn {
     position: absolute;
     top: 20px;
     left: 20px;
     padding: 10px 20px;
+    font-size: 16px;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
     font-size: 16px;
 }
