@@ -1,11 +1,6 @@
-# Use an NGINX base image
-FROM nginx:alpine
-
-# Copy game files to the NGINX server root
-COPY . /usr/share/nginx/html
-
-# Expose port 80
+FROM nginx
+MAINTAINER Author Uma Mahesh
+LABEL this is just a basic game.
 EXPOSE 80
-
-# Start NGINX
-CMD ["nginx", "-g", "daemon off;"]
+COPY . /usr/share/nginx/html
+WORKDIR /var/lib/jenkins/workspace/MyFirstJob
